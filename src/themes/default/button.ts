@@ -1,0 +1,34 @@
+import { neutral, primary, text } from './_colors';
+
+const button = {
+  bgColor: neutral.color50,
+  borderColor: neutral.color400,
+  color: text.color200,
+  _disabled: {
+    bgColor: neutral.color50,
+    borderColor: neutral.color400,
+    color: text.color400,
+  },
+  _hover: {
+    bgColor: neutral.color50,
+    borderColor: neutral.color900,
+    color: text.color100,
+  },
+  _primary: {
+    bgColor: primary.color500,
+    borderColor: primary.color500,
+    color: text.alt100,
+    _disabled: {
+      bgColor: primary.color200,
+      borderColor: primary.color200,
+      color: text.alt100,
+    },
+    _hover: {
+      bgColor: primary.color400,
+      borderColor: primary.color400,
+      color: text.alt100,
+    },
+  },
+};
+
+export default button;
