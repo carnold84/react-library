@@ -1,9 +1,13 @@
 import { neutral, primary, text } from './_colors';
+import { primaryFont } from './_typography';
 
 const button = {
   bgColor: neutral.color50,
   borderColor: neutral.color400,
   color: text.color200,
+  fontFamily: primaryFont.family,
+  fontSize: '1.4rem',
+  fontWeight: primaryFont.weight,
   _disabled: {
     bgColor: neutral.color50,
     borderColor: neutral.color400,

@@ -44,6 +44,9 @@ declare module 'styled-components' {
       bgColor: string;
       borderColor: string;
       color: string;
+      fontFamily: string;
+      fontSize: string;
+      fontWeight: number;
       _disabled: {
         bgColor: string;
         borderColor: string;
@@ -70,8 +73,12 @@ declare module 'styled-components' {
         };
       };
     };
+    fontFamily: string;
     global: {
       color: string;
+      htmlFontFamily: string;
+      htmlFontSize: string;
+      htmlFontWeight: number;
     };
     header: {
       borderColor: string;

@@ -7,6 +7,9 @@ export const Wrapper = styled.button`
   color: ${({ theme }) => theme.button.color};
   cursor: pointer;
   display: inline-block;
+  font-family: ${({ theme }) => theme.button.fontFamily};
+  font-size: ${({ theme }) => theme.button.fontSize};
+  font-weight: ${({ theme }) => theme.button.fontWeight};
   padding: 11px 20px;
 
   &:hover {
