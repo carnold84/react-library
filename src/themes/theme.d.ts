@@ -3,7 +3,7 @@ import 'styled-components';
 // add types for theme to styled components
 // https://styled-components.com/docs/api#typescript
 declare module 'styled-components' {
-  export interface DefaultTheme {
+  export interface Theme {
     colors: {
       neutral: {
         color50: string;
@@ -76,5 +76,7 @@ declare module 'styled-components' {
     header: {
       borderColor: string;
     };
+    id: string;
+    label: string;
   }
 }

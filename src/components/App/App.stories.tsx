@@ -1,32 +1,52 @@
 import React from 'react';
 import { Story } from '@storybook/react';
+import styled from 'styled-components';
 import Button from '../Button/Button';
+import darkTheme from '../../themes/dark';
 import defaultTheme from '../../themes/default';
 
 import App, { Props } from './App';
 
 export default {
-  argTypes: {},
+  argTypes: {
+    children: {
+      control: {
+        type: null,
+      },
+    },
+    selectedThemeId: {
+      control: {
+        options: ['default-theme', 'dark-theme'],
+        type: 'select',
+      },
+    },
+    themes: {
+      control: {
+        type: null,
+      },
+    },
+  },
   component: App,
   title: 'Components/App',
 };
 
 const Template: Story<Props> = (args) => <App {...args} />;
 
-export const DefaultTheme = Template.bind({});
-DefaultTheme.args = {
-  children: <Button isPrimary={true}>Example Button</Button>,
-  theme: defaultTheme,
-};
+const Background = styled.div`
+  background-color: ${({ theme }) => theme.colors.neutral.color100};
+  box-sizing: border-box;
+  height: 100px;
+  padding: 20px;
+  width: 100%;
+`;
 
-export const CustomTheme = Template.bind({});
-CustomTheme.args = {
-  children: <Button isPrimary={true}>Example Button</Button>,
-  theme: {
-    ...defaultTheme,
-    button: {
-      ...defaultTheme.button,
-      bgColor: 'crimson',
-    },
-  },
+export const DefaultApp = Template.bind({});
+DefaultApp.args = {
+  children: (
+    <Background>
+      <Button isPrimary={true}>Example Button</Button>
+    </Background>
+  ),
+  selectedThemeId: defaultTheme.id,
+  themes: [defaultTheme, darkTheme],
 };

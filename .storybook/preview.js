@@ -1,4 +1,5 @@
 import App from '../src/components/App/App';
+import darkTheme from '../src/themes/dark';
 import defaultTheme from '../src/themes/default';
 import GlobalStyles from '../src/styles/global.styles';
 
@@ -14,7 +15,7 @@ export const parameters = {
 
 export const decorators = [
   (Story) => (
-    <App theme={defaultTheme}>
+    <App themes={[defaultTheme, darkTheme]}>
       <GlobalStyles />
       <Story />
     </App>
