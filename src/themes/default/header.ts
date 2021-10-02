@@ -1,5 +1,8 @@
+import { neutral } from './_colors';
+
 const header = {
-  borderColor: '#cccccc',
+  backgroundColor: neutral.color50,
+  borderColor: neutral.color300,
 };
 
 export default header;

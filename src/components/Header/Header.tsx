@@ -10,7 +10,11 @@ type Props = {
  * Primary UI component for user interaction
  */
 const Header = ({ children, ...props }: Props) => {
-  return <Wrapper {...props}>{children}</Wrapper>;
+  return (
+    <Wrapper as={'header'} {...props}>
+      {children}
+    </Wrapper>
+  );
 };
 
 export default Header;

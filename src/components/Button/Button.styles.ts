@@ -1,9 +1,8 @@
 import styled from 'styled-components';
 import Box from '../Box';
 
-export const Wrapper = styled(Box).attrs({
-  as: 'button',
-})`
+// extend box so we can use styled stystem spacing, sizes etc
+export const Wrapper = styled(Box)`
   background-color: ${({ theme }) => theme.button.bgColor};
   border: 1px solid ${({ theme }) => theme.button.borderColor};
   border-radius: 3em;

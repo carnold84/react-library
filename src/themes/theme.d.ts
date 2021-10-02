@@ -81,6 +81,7 @@ declare module 'styled-components' {
       htmlFontWeight: number;
     };
     header: {
+      backgroundColor: string;
       borderColor: string;
     };
     id: string;

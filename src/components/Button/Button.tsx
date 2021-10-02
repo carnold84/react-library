@@ -27,6 +27,7 @@ const Button = ({
 
   return (
     <Wrapper
+      as={'button'}
       className={classes.join(' ')}
       disabled={isDisabled}
       onClick={onClick}
