@@ -47,6 +47,6 @@ DefaultApp.args = {
       <Button isPrimary={true}>Example Button</Button>
     </Background>
   ),
-  selectedThemeId: darkTheme.id,
+  selectedThemeId: defaultTheme.id,
   themes: [defaultTheme, darkTheme],
 };
