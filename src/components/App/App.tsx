@@ -1,5 +1,6 @@
 import React from 'react';
 import { Theme, ThemeProvider } from 'styled-components';
+import GlobalStyles from '../../styles/global.styles';
 import defaultTheme from '../../themes/default';
 
 export interface Props {
@@ -22,6 +23,8 @@ const App = ({ children, selectedThemeId, themes }: Props) => {
   let selectedTheme: Theme;
   const themesById: ThemesById = {};
 
+  console.log('themes', themes);
+
   if (themes) {
     themes.forEach((theme: Theme) => {
       themesById[theme.id] = theme;
@@ -32,7 +35,14 @@ const App = ({ children, selectedThemeId, themes }: Props) => {
     selectedTheme = themesById[defaultTheme.id];
   }
 
-  return <ThemeProvider theme={selectedTheme}>{children}</ThemeProvider>;
+  console.log('selectedTheme', selectedTheme);
+
+  return (
+    <ThemeProvider theme={selectedTheme}>
+      <GlobalStyles />
+      {children}
+    </ThemeProvider>
+  );
 };
 
 export default App;
