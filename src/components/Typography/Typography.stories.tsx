@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 import Typography from './Typography';
 
@@ -59,4 +59,24 @@ AllVariants.args = {
   children: 'Typography',
   component: 'p',
   variant: 'p',
+};
+
+const Template3 = (args) => {
+  const [value, setValue] = useState('Value');
+
+  const onChange = (evt) => {
+    setValue(evt.target.value);
+  };
+
+  return (
+    <>
+      <Typography {...args} onChange={onChange} value={value} />
+    </>
+  );
+};
+
+export const AsInput = Template3.bind({});
+AsInput.args = {
+  component: 'input',
+  variant: 'h4',
 };

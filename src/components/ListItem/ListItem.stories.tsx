@@ -1,14 +1,14 @@
 import React from 'react';
 
-import Header from './Header';
+import ListItem from './ListItem';
 
 export default {
   argTypes: {},
-  component: Header,
-  title: 'Components/Header',
+  component: ListItem,
+  title: 'Components/List Item',
 };
 
-const Template = (args) => <Header {...args} />;
+const Template = (args) => <ListItem {...args} />;
 
 export const Main = Template.bind({});
 Main.args = {

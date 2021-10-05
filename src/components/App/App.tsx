@@ -23,8 +23,6 @@ const App = ({ children, selectedThemeId, themes }: Props) => {
   let selectedTheme: Theme;
   const themesById: ThemesById = {};
 
-  console.log('themes', themes);
-
   if (themes) {
     themes.forEach((theme: Theme) => {
       themesById[theme.id] = theme;
@@ -34,8 +32,6 @@ const App = ({ children, selectedThemeId, themes }: Props) => {
     themesById[defaultTheme.id] = defaultTheme;
     selectedTheme = themesById[defaultTheme.id];
   }
-
-  console.log('selectedTheme', selectedTheme);
 
   return (
     <ThemeProvider theme={selectedTheme}>

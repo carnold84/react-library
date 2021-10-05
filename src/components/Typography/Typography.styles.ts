@@ -3,6 +3,8 @@ import Box from '../Box';
 
 // extend box so we can use styled stystem spacing, sizes etc
 export const Wrapper = styled(Box)`
+  background-color: transparent;
+  border: none;
   font-family: ${({ theme }) => theme.button.fontFamily};
   font-weight: ${({ theme }) => theme.button.fontWeight};
   margin: 0 0 20px;

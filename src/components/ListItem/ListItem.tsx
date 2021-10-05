@@ -1,5 +1,5 @@
 import React from 'react';
-import { Wrapper } from './Header.styles';
+import { Wrapper } from './ListItem.styles';
 
 type Props = {
   children: React.ReactNode;
@@ -9,7 +9,7 @@ type Props = {
 /**
  * Primary UI component for user interaction
  */
-const Header = ({ children, ...props }: Props) => {
+const ListItem = ({ children, ...props }: Props) => {
   return (
     <Wrapper as={'header'} {...props}>
       {children}
@@ -17,4 +17,4 @@ const Header = ({ children, ...props }: Props) => {
   );
 };
 
-export default Header;
+export default ListItem;
