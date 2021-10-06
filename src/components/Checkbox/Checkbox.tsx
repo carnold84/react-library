@@ -4,6 +4,7 @@ import {
   Icon,
   Input,
   Label,
+  Text,
   UncheckedIcon,
   Wrapper,
 } from './Checkbox.styles';
@@ -33,10 +34,11 @@ const Checkbox = ({
   ...rest
 }: CheckboxProps) => {
   return (
-    <Wrapper {...rest}>
+    <Wrapper className={isDisabled ? 'is_disabled' : ''} {...rest}>
       <Input
         checked={value}
         disabled={isDisabled}
+        aria-disabled={isDisabled}
         id={id}
         name={name}
         onChange={(evt) => onChange(evt)}
@@ -51,7 +53,7 @@ const Checkbox = ({
             focusable="false"
           />
         </Icon>
-        {label}
+        <Text>{label}</Text>
       </Label>
     </Wrapper>
   );

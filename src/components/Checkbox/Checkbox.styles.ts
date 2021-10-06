@@ -8,12 +8,11 @@ const size = '26px';
 // extend box so we can use styled stystem spacing, sizes etc
 export const Wrapper = styled(Box)`
   display: inline-flex;
-  fill: ${({ theme }) => theme.button.color};
   position: relative;
 
-  &[disabled],
-  &[aria-disabled='true'] {
+  &.is_disabled {
     opacity: 0.4;
+    pointer-events: none;
   }
 `;
 
@@ -21,11 +20,21 @@ export const Label = styled(Typography).attrs({
   component: 'label',
 })`
   align-items: center;
+  color: ${({ theme }) => theme.checkbox.label.color};
   display: flex;
   margin: 0;
 `;
 
+export const Icon = styled.div`
+  cursor: pointer;
+  fill: ${({ theme }) => theme.checkbox.icon.fill};
+  height: ${size};
+  position: relative;
+  width: ${size};
+`;
+
 export const Input = styled.input`
+  appearance: none;
   cursor: pointer;
   height: 100%;
   left: 0;
@@ -35,19 +44,17 @@ export const Input = styled.input`
   top: 0;
   width: 100%;
 
-  &:disabled + ${Label} {
-    opacity: 0.5;
+  &:hover + ${Label} {
+    color: ${({ theme }) => theme.checkbox._hover.label.color};
+  }
+
+  &:hover + ${Label} ${Icon} {
+    fill: ${({ theme }) => theme.checkbox._hover.icon.fill};
   }
 `;
 
-export const Icon = styled.div`
-  height: ${size};
-  position: relative;
-  width: ${size};
-
-  ${Input}:disabled + ${Label} {
-    opacity: 0;
-  }
+export const Text = styled.span`
+  margin: 0 3px 0 0;
 `;
 
 export const UncheckedIcon = styled(Checkbox)`

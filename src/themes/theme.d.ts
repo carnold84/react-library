@@ -73,6 +73,22 @@ declare module 'styled-components' {
         };
       };
     };
+    checkbox: {
+      icon: {
+        fill: string;
+      };
+      label: {
+        color: string;
+      };
+      _hover: {
+        icon: {
+          fill: string;
+        };
+        label: {
+          color: string;
+        };
+      };
+    };
     fontFamily: string;
     global: {
       color: string;
