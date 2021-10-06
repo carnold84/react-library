@@ -14,6 +14,7 @@ export type Props = {
  */
 const Button = ({
   children,
+  className,
   isDisabled = false,
   isPrimary = false,
   onClick,
@@ -28,7 +29,7 @@ const Button = ({
   return (
     <Wrapper
       as={'button'}
-      className={classes.join(' ')}
+      className={`${classes.join(' ')}${className}`}
       disabled={isDisabled}
       onClick={onClick}
       {...rest}>

@@ -1,25 +1,21 @@
-import React from 'react';
+import React, { useState } from 'react';
+import { Story, Meta } from '@storybook/react';
 
-import Checkbox from './Checkbox';
+import Checkbox, { CheckboxProps } from './Checkbox';
 
 export default {
   argTypes: {
-    children: {
-      control: {
-        type: null,
-      },
-    },
     isDisabled: {
       control: {
         type: 'boolean',
       },
     },
-    isPrimary: {
+    label: {
       control: {
-        type: 'boolean',
+        type: 'text',
       },
     },
-    onClick: {
+    onChange: {
       control: {
         type: null,
       },
@@ -27,18 +23,24 @@ export default {
   },
   component: Checkbox,
   title: 'Components/Checkbox',
-};
+} as Meta;
 
-const Template = (args) => (
-  <>
-    <Checkbox {...args}>Checkbox</Checkbox>
-  </>
-);
+const Template: Story<CheckboxProps> = (args) => {
+  const [value, setValue] = useState(false);
+
+  const onChange = () => {
+    setValue(!value);
+  };
+
+  return (
+    <>
+      <Checkbox {...args} onChange={onChange} value={value} />
+    </>
+  );
+};
 
 export const Default = Template.bind({});
 Default.args = {
-  children: 'Checkbox',
-  onClick: () => {
-    alert('Clicked!');
-  },
+  id: 'my-checkbox',
+  label: 'Check me!',
 };

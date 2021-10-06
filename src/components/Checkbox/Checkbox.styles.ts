@@ -1,50 +1,81 @@
 import styled from 'styled-components';
+import { Checkbox, CheckboxChecked } from '../../icons';
 import Box from '../Box';
+import Typography from '../Typography';
+
+const size = '26px';
 
 // extend box so we can use styled stystem spacing, sizes etc
 export const Wrapper = styled(Box)`
-  background-color: ${({ theme }) => theme.button.bgColor};
-  border: 1px solid ${({ theme }) => theme.button.borderColor};
-  border-radius: 3em;
-  color: ${({ theme }) => theme.button.color};
+  display: inline-flex;
+  fill: ${({ theme }) => theme.button.color};
+  position: relative;
+
+  &[disabled],
+  &[aria-disabled='true'] {
+    opacity: 0.4;
+  }
+`;
+
+export const Label = styled(Typography).attrs({
+  component: 'label',
+})`
+  align-items: center;
+  display: flex;
+  margin: 0;
+`;
+
+export const Input = styled.input`
   cursor: pointer;
-  display: inline-block;
-  font-family: ${({ theme }) => theme.button.fontFamily};
-  font-size: ${({ theme }) => theme.button.fontSize};
-  font-weight: ${({ theme }) => theme.button.fontWeight};
-  padding: 11px 20px;
+  height: 100%;
+  left: 0;
+  opacity: 0;
+  padding: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
 
-  &:hover {
-    background-color: ${({ theme }) => theme.button._hover.bgColor};
-    border-color: ${({ theme }) => theme.button._hover.borderColor};
-    color: ${({ theme }) => theme.button._hover.color};
+  &:disabled + ${Label} {
+    opacity: 0.5;
   }
+`;
 
-  &:disabled {
-    background-color: ${({ theme }) => theme.button._disabled.bgColor};
-    border-color: ${({ theme }) => theme.button._disabled.borderColor};
-    color: ${({ theme }) => theme.button._disabled.color};
-    pointer-events: none;
+export const Icon = styled.div`
+  height: ${size};
+  position: relative;
+  width: ${size};
+
+  ${Input}:disabled + ${Label} {
+    opacity: 0;
   }
+`;
 
-  &.is_primary {
-    background-color: ${({ theme }) => theme.button._primary.bgColor};
-    border-color: ${({ theme }) => theme.button._primary.borderColor};
-    color: ${({ theme }) => theme.button._primary.color};
+export const UncheckedIcon = styled(Checkbox)`
+  height: ${size};
+  left: 0;
+  opacity: 1;
+  padding: 0;
+  position: absolute;
+  top: 0;
+  transition: opacity 300ms ease;
+  width: ${size};
 
-    &:hover {
-      background-color: ${({ theme }) => theme.button._primary._hover.bgColor};
-      border-color: ${({ theme }) => theme.button._primary._hover.borderColor};
-      color: ${({ theme }) => theme.button._primary._hover.color};
-    }
+  ${Input}:checked + ${Label} & {
+    opacity: 0;
+  }
+`;
 
-    &:disabled {
-      background-color: ${({ theme }) =>
-        theme.button._primary._disabled.bgColor};
-      border-color: ${({ theme }) =>
-        theme.button._primary._disabled.borderColor};
-      color: ${({ theme }) => theme.button._primary._disabled.color};
-      pointer-events: none;
-    }
+export const CheckedIcon = styled(CheckboxChecked)`
+  height: ${size};
+  left: 0;
+  opacity: 0;
+  padding: 0;
+  position: absolute;
+  top: 0;
+  transition: opacity 300ms ease;
+  width: ${size};
+
+  ${Input}:checked + ${Label} & {
+    opacity: 1;
   }
 `;

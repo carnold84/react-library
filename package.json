@@ -11,7 +11,7 @@
   "scripts": {
     "build": "npm run clean && npm run svgr && rollup -c rollup.config.ts",
     "clean": "rimraf lib && rimraf src/icons/svg",
-    "svgr": "rimraf src/icons/svg && svgr --replace-attr-values '#000=inherit' --svg-props 'fill=inherit' --typescript -d src/icons/svg src/assets/svg-icons",
+    "svgr": "rimraf src/icons/svg && svgr -d src/icons/svg src/assets/svg-icons",
     "test": "echo \"Error: no test specified\" && exit 1",
     "storybook": "npm run svgr && start-storybook -p 6006",
     "build-storybook": "build-storybook"

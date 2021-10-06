@@ -31,7 +31,9 @@ export default {
 
 const Template = (args) => (
   <>
-    <Button {...args}>Button</Button>
+    <Button className={'test'} {...args}>
+      Button
+    </Button>
   </>
 );
 
