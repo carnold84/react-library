@@ -33,6 +33,9 @@ bower_components
 build/Release
 lib
 
+# icons generated from svgs
+src/icons/svg
+
 # Dependency directories
 node_modules/
 jspm_packages/

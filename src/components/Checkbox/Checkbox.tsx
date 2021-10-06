@@ -25,16 +25,7 @@ const Checkbox = ({
     classes.push('is_primary');
   }
 
-  return (
-    <Wrapper
-      as={'button'}
-      className={classes.join(' ')}
-      disabled={isDisabled}
-      onClick={onClick}
-      {...rest}>
-      {children}
-    </Wrapper>
-  );
+  return <Wrapper {...rest}>{children}</Wrapper>;
 };
 
 export default Checkbox;
