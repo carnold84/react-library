@@ -1,7 +1,7 @@
 import React from 'react';
 import { Wrapper } from './Button.styles';
 
-export type Props = {
+export type ButtonProps = {
   children: React.ReactNode;
   isDisabled?: boolean;
   isPrimary?: boolean;
@@ -19,17 +19,21 @@ const Button = ({
   isPrimary = false,
   onClick,
   ...rest
-}: Props) => {
+}: ButtonProps) => {
   const classes = [];
 
   if (isPrimary) {
     classes.push('is_primary');
   }
 
+  if (className) {
+    classes.push(className);
+  }
+
   return (
     <Wrapper
       as={'button'}
-      className={`${classes.join(' ')}${className}`}
+      className={`${classes.join(' ')}`}
       disabled={isDisabled}
       onClick={onClick}
       {...rest}>

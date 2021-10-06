@@ -1,6 +1,7 @@
 import React from 'react';
+import { Story, Meta } from '@storybook/react';
 
-import Button from './Button';
+import Button, { ButtonProps } from './Button';
 
 export default {
   argTypes: {
@@ -27,13 +28,11 @@ export default {
   },
   component: Button,
   title: 'Components/Button',
-};
+} as Meta;
 
-const Template = (args) => (
+const Template: Story<ButtonProps> = (args) => (
   <>
-    <Button className={'test'} {...args}>
-      Button
-    </Button>
+    <Button {...args}>Button</Button>
   </>
 );
 
