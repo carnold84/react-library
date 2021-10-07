@@ -3,14 +3,14 @@ import { primaryFont } from './_typography';
 
 const button = {
   bgColor: neutral.color50,
-  borderColor: neutral.color400,
+  borderColor: neutral.color900,
   color: text.color200,
   fontFamily: primaryFont.family,
   fontSize: '1.4rem',
   fontWeight: primaryFont.weight,
   _disabled: {
     bgColor: neutral.color50,
-    borderColor: neutral.color400,
+    borderColor: neutral.color600,
     color: text.color400,
   },
   _hover: {

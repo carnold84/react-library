@@ -1,14 +1,14 @@
 export const neutral = {
   color50: '#111111',
-  color100: '#171717',
-  color200: '#1c1c1c',
-  color300: '#222222',
-  color400: '#282828',
-  color500: '#2d2d2d',
-  color600: '#333333',
-  color700: '#393939',
-  color800: '#3e3e3e',
-  color900: '#444444',
+  color100: '#191919',
+  color200: '#202020',
+  color300: '#282828',
+  color400: '#2f2f2f',
+  color500: '#373737',
+  color600: '#3e3e3e',
+  color700: '#464646',
+  color800: '#4d4d4d',
+  color900: '#555555',
 };
 
 export const primary = {
@@ -30,7 +30,7 @@ export const text = {
   alt300: '#939393',
   alt400: '#cccccc',
   color100: '#ffffff',
-  color200: '#eeeeee',
-  color300: '#dddddd',
-  color400: '#cccccc',
+  color200: '#dddddd',
+  color300: '#bbbbbb',
+  color400: '#999999',
 };

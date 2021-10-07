@@ -9,10 +9,10 @@ const checkbox = {
   },
   _hover: {
     icon: {
-      fill: primary.color500,
+      fill: primary.color300,
     },
     label: {
-      color: primary.color500,
+      color: primary.color300,
     },
   },
 };

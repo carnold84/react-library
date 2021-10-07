@@ -54,7 +54,7 @@ export const Input = styled.input`
 `;
 
 export const Text = styled.span`
-  margin: 0 3px 0 0;
+  margin: 0 0 0 3px;
 `;
 
 export const UncheckedIcon = styled(Checkbox)`
