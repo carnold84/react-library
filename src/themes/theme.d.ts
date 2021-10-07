@@ -89,7 +89,6 @@ declare module 'styled-components' {
         };
       };
     };
-    flexbox: object;
     fontFamily: string;
     global: {
       color: string;
