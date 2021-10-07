@@ -5,6 +5,7 @@ import button from './button';
 import checkbox from './checkbox';
 import global from './global';
 import header from './header';
+import listItemText from './listItemText';
 import typography from './typography';
 
 const darkTheme: Theme = {
@@ -20,6 +21,7 @@ const darkTheme: Theme = {
   header,
   id: 'dark-theme',
   label: 'Dark',
+  listItemText,
   typography,
 };
 

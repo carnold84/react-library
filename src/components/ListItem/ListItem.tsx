@@ -1,18 +1,37 @@
-import React from 'react';
-import { Wrapper } from './ListItem.styles';
+import React, { ComponentType, FunctionComponent, ReactNode } from 'react';
+import {
+  Content,
+  ContentLeft,
+  ContentMain,
+  ContentRight,
+  Wrapper,
+} from './ListItem.styles';
 
-type Props = {
-  children: React.ReactNode;
+type ListItemProps = {
+  children: ReactNode;
+  component?: FunctionComponent | ComponentType | string;
+  contentLeft?: ReactNode;
+  contentRight?: ReactNode;
   [x: string]: any;
 };
 
 /**
  * Primary UI component for user interaction
  */
-const ListItem = ({ children, ...props }: Props) => {
+const ListItem = ({
+  children,
+  component = 'div',
+  contentLeft,
+  contentRight,
+  ...rest
+}: ListItemProps) => {
   return (
-    <Wrapper as={'header'} {...props}>
-      {children}
+    <Wrapper {...rest}>
+      <Content forwardedAs={component}>
+        {contentLeft && <ContentLeft>{contentLeft}</ContentLeft>}
+        <ContentMain>{children}</ContentMain>
+        {contentRight && <ContentRight>{contentRight}</ContentRight>}
+      </Content>
     </Wrapper>
   );
 };

@@ -5,6 +5,9 @@ const header = {
   color: text.color100,
   fontFamily: primaryFont.family,
   fontWeight: primaryFont.weight,
+  _bold: {
+    fontWeight: 600,
+  },
 };
 
 export default header;

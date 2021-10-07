@@ -1,5 +1,9 @@
-import styled from 'styled-components';
-import { flexbox, grid, layout, space } from 'styled-system';
+import React from 'react';
+import { Wrapper } from './Box.styles';
+
+type BoxProps = {
+  [x: string]: any;
+};
 
 /**
  * Base UI component that implements [Styled System](https://styled-system.com).
@@ -13,15 +17,8 @@ import { flexbox, grid, layout, space } from 'styled-system';
  * * [responsive styles](https://styled-system.com/responsive-styles)
  * * [spacing](https://styled-system.com/api#space)
  */
-const Box = styled.div(
-  {
-    boxSizing: 'border-box',
-    minWidth: 0,
-  },
-  grid,
-  flexbox,
-  layout,
-  space
-);
+const Box = ({ ...props }: BoxProps) => {
+  return <Wrapper {...props} />;
+};
 
 export default Box;

@@ -5,6 +5,7 @@ import button from './button';
 import checkbox from './checkbox';
 import global from './global';
 import header from './header';
+import listItemText from './listItemText';
 import typography from './typography';
 
 const defaultTheme: Theme = {
@@ -20,6 +21,7 @@ const defaultTheme: Theme = {
   header,
   id: 'default-theme',
   label: 'Default',
+  listItemText,
   typography,
 };
 

@@ -1,6 +1,8 @@
 import React from 'react';
 
 import ListItem from './ListItem';
+import { LocationOutline } from '../../icons';
+import ListItemText from '../ListItemText/ListItemText';
 
 export default {
   argTypes: {},
@@ -14,8 +16,11 @@ export const Main = Template.bind({});
 Main.args = {
   children: (
     <>
-      <div>Logo</div>
-      <div>Menu</div>
+      <ListItemText>Primary item text</ListItemText>
+      <ListItemText variant={'secondary'}>Secondary item text</ListItemText>
     </>
+  ),
+  contentLeft: (
+    <LocationOutline style={{ alignSelf: 'center', margin: '0 15px 0 0' }} />
   ),
 };

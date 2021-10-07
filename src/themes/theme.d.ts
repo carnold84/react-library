@@ -89,6 +89,7 @@ declare module 'styled-components' {
         };
       };
     };
+    flexbox: object;
     fontFamily: string;
     global: {
       color: string;
@@ -102,10 +103,19 @@ declare module 'styled-components' {
     };
     id: string;
     label: string;
+    listItemText: {
+      color: string;
+      _secondary: {
+        color: string;
+      };
+    };
     typography: {
       color: string;
       fontFamily: string;
       fontWeight: number;
+      _bold: {
+        fontWeight: number;
+      };
     };
   }
 }

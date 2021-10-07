@@ -5,6 +5,7 @@ export type Props = {
   children?: ReactNode;
   component?: any;
   variant?: 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6' | 'p';
+  weight?: 'normal' | 'bold';
   [x: string]: any;
 };
 
@@ -16,10 +17,22 @@ const Typography = ({
   className,
   component = 'p',
   variant = 'p',
+  weight = 'normal',
   ...rest
 }: Props) => {
+  const classes = [`is_${variant}`, `is_${weight}`];
+
+  if (className) {
+    classes.push(className);
+  }
+
   return (
-    <Wrapper as={component} className={`is_${variant} ${className}`} {...rest}>
+    <Wrapper
+      className={classes.join(' ')}
+      forwardedAs={component}
+      m={0}
+      mb={3}
+      {...rest}>
       {children}
     </Wrapper>
   );
