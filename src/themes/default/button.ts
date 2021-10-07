@@ -1,5 +1,5 @@
 import { neutral, primary, text } from './_colors';
-import { primaryFont } from './_typography';
+import { primaryFont } from './_fonts';
 
 const button = {
   bgColor: neutral.color50,

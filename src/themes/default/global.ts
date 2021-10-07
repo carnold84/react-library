@@ -1,4 +1,4 @@
-import { primaryFont } from './_typography';
+import { primaryFont } from './_fonts';
 
 const global = {
   color: '#222222',

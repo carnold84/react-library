@@ -1,10 +1,11 @@
 import { Theme } from 'styled-components';
 import { neutral, primary, text } from './_colors';
-import { primaryFont } from './_typography';
+import { primaryFont } from './_fonts';
 import button from './button';
 import checkbox from './checkbox';
 import global from './global';
 import header from './header';
+import typography from './typography';
 
 const darkTheme: Theme = {
   button,
@@ -19,6 +20,7 @@ const darkTheme: Theme = {
   header,
   id: 'dark-theme',
   label: 'Dark',
+  typography,
 };
 
 export default darkTheme;

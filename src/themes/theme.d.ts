@@ -102,5 +102,10 @@ declare module 'styled-components' {
     };
     id: string;
     label: string;
+    typography: {
+      color: string;
+      fontFamily: string;
+      fontWeight: number;
+    };
   }
 }

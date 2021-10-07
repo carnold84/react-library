@@ -5,8 +5,9 @@ import Box from '../Box';
 export const Wrapper = styled(Box)`
   background-color: transparent;
   border: none;
-  font-family: ${({ theme }) => theme.button.fontFamily};
-  font-weight: ${({ theme }) => theme.button.fontWeight};
+  color: ${({ theme }) => theme.typography.color};
+  font-family: ${({ theme }) => theme.typography.fontFamily};
+  font-weight: ${({ theme }) => theme.typography.fontWeight};
   margin: 0 0 20px;
 
   &.is_h1 {
