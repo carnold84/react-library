@@ -1,6 +1,6 @@
-import { createGlobalStyle, Theme } from 'styled-components';
+import { createGlobalStyle, DefaultTheme } from 'styled-components';
 
-const GlobalStyles = createGlobalStyle<{ theme: Theme }>`
+const GlobalStyles = createGlobalStyle<{ theme: DefaultTheme }>`
   *, *::before, *::after {
     box-sizing: border-box;
   }

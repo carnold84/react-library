@@ -1,22 +1,9 @@
-type ThemeColors = {
+export type ThemeColors = {
   [key: string]: any;
 };
 
-type ThemeFonts = {
+export type ThemeFonts = {
   [key: string]: any;
-};
-
-type ThemeProps = {
-  colors: ThemeColors;
-  fonts: ThemeFonts;
-};
-
-export type ThemeVariables = {
-  colors?: ThemeColors;
-  fonts?: ThemeFonts;
-  id: string;
-  name: string;
-  theme?: BaseTheme;
 };
 
 export type ThemeModuleVariables = {
@@ -25,5 +12,5 @@ export type ThemeModuleVariables = {
 };
 
 export type BaseTheme = {
-  [key: string]: ({ colors, fonts }: ThemeProps) => any;
+  [key: string]: ({ colors, fonts }: ThemeModuleVariables) => object | object;
 };

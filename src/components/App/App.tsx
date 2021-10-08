@@ -1,16 +1,16 @@
 import React from 'react';
-import { Theme, ThemeProvider } from 'styled-components';
+import { DefaultTheme, ThemeProvider } from 'styled-components';
 import GlobalStyles from '../../styles/global.styles';
 import defaultTheme from '../../themes/default';
 
 export interface Props {
   children: React.ReactNode;
   selectedThemeId?: string;
-  themes?: Array<Theme>;
+  themes?: Array<DefaultTheme>;
 }
 
 interface ThemesById {
-  [index: string]: Theme;
+  [index: string]: DefaultTheme;
 }
 
 /**
@@ -20,11 +20,11 @@ interface ThemesById {
  * the top level of your application.
  */
 const App = ({ children, selectedThemeId, themes }: Props) => {
-  let selectedTheme: Theme;
+  let selectedTheme: DefaultTheme;
   const themesById: ThemesById = {};
 
   if (themes) {
-    themes.forEach((theme: Theme) => {
+    themes.forEach((theme: DefaultTheme) => {
       themesById[theme.id] = theme;
     });
     selectedTheme = themesById[selectedThemeId ?? themes[0].id];
