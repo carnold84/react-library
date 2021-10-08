@@ -1,6 +1,5 @@
-import { Theme } from 'styled-components';
-import { neutral, primary, text } from './_colors';
-import { primaryFont } from './_fonts';
+import colors from './_colors';
+import fonts from './_fonts';
 import button from './button';
 import checkbox from './checkbox';
 import global from './global';
@@ -8,21 +7,19 @@ import header from './header';
 import listItemText from './listItemText';
 import typography from './typography';
 
-const darkTheme: Theme = {
-  button,
-  checkbox,
-  colors: {
-    primary,
-    neutral,
-    text,
-  },
-  fontFamily: primaryFont.family,
-  global,
-  header,
-  id: 'dark-theme',
-  label: 'Dark',
-  listItemText,
-  typography,
-};
+import createTheme from '../createTheme';
 
-export default darkTheme;
+export default createTheme({
+  colors,
+  fonts,
+  id: 'dark-theme',
+  name: 'Dark',
+  theme: {
+    button,
+    checkbox,
+    global,
+    header,
+    listItemText,
+    typography,
+  },
+});

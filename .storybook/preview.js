@@ -4,12 +4,15 @@ import App from '../src/components/App';
 import Box from '../src/components/Box';
 import darkTheme from '../src/themes/dark';
 import defaultTheme from '../src/themes/default';
+import orangeTheme from '../src/themes/orange';
 import GlobalStyles from '../src/styles/global.styles';
 
 //https://storybook.js.org/addons/storybook-addon-themes
 const ThemeDecorator = ({ children, theme }) => {
   return (
-    <App selectedThemeId={theme?.theme.id} themes={[defaultTheme, darkTheme]}>
+    <App
+      selectedThemeId={theme?.theme.id}
+      themes={[defaultTheme, darkTheme, orangeTheme]}>
       <GlobalStyles />
       <Box
         p={20}
@@ -20,6 +23,8 @@ const ThemeDecorator = ({ children, theme }) => {
   );
 };
 addDecorator(withThemes);
+
+console.log(defaultTheme, darkTheme, orangeTheme);
 
 export const parameters = {
   actions: { argTypesRegex: '^on[A-Z].*' },
@@ -32,17 +37,22 @@ export const parameters = {
   },
   themes: {
     clearable: false,
-    default: defaultTheme.label,
+    default: defaultTheme.name,
     list: [
       {
-        name: defaultTheme.label,
+        name: defaultTheme.name,
         color: defaultTheme.colors.neutral.color50,
         theme: defaultTheme,
       },
       {
-        name: darkTheme.label,
+        name: darkTheme.name,
         color: darkTheme.colors.neutral.color50,
         theme: darkTheme,
+      },
+      {
+        name: orangeTheme.name,
+        color: orangeTheme.colors.neutral.color50,
+        theme: orangeTheme,
       },
     ],
     Decorator: ThemeDecorator,

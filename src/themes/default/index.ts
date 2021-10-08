@@ -1,28 +1,3 @@
-import { Theme } from 'styled-components';
-import { neutral, primary, text } from './_colors';
-import { primaryFont } from './_fonts';
-import button from './button';
-import checkbox from './checkbox';
-import global from './global';
-import header from './header';
-import listItemText from './listItemText';
-import typography from './typography';
+import createTheme from '../createTheme';
 
-const defaultTheme: Theme = {
-  button,
-  checkbox,
-  colors: {
-    primary,
-    neutral,
-    text,
-  },
-  fontFamily: primaryFont.family,
-  global,
-  header,
-  id: 'default-theme',
-  label: 'Default',
-  listItemText,
-  typography,
-};
-
-export default defaultTheme;
+export default createTheme({ id: 'default-theme', name: 'Default (Light)' });
