@@ -1,4 +1,4 @@
-import { ThemeModuleVariables } from '../../types';
+import { ThemeModuleVariables } from '../types';
 
 const listItemText = ({ colors }: ThemeModuleVariables) => {
   return {

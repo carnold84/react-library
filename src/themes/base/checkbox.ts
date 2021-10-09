@@ -1,6 +1,23 @@
-import { ThemeModuleVariables } from '../../types';
+import { ThemeModuleVariables } from '../types';
 
-const checkbox = ({ colors }: ThemeModuleVariables) => {
+export type CheckboxTypes = {
+  icon: {
+    fill: string;
+  };
+  label: {
+    color: string;
+  };
+  _hover: {
+    icon: {
+      fill: string;
+    };
+    label: {
+      color: string;
+    };
+  };
+};
+
+const checkbox = ({ colors }: ThemeModuleVariables): CheckboxTypes => {
   return {
     icon: {
       fill: colors.text.color200,

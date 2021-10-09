@@ -24,8 +24,6 @@ const ThemeDecorator = ({ children, theme }) => {
 };
 addDecorator(withThemes);
 
-console.log(defaultTheme, darkTheme, orangeTheme);
-
 export const parameters = {
   actions: { argTypesRegex: '^on[A-Z].*' },
   backgrounds: { disable: true },

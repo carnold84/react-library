@@ -1,6 +1,40 @@
-import { ThemeModuleVariables } from '../../types';
+import { ThemeModuleVariables } from '../types';
 
-const button = ({ colors, fonts }: ThemeModuleVariables) => {
+export type ButtonTypes = {
+  bgColor: string;
+  borderColor: string;
+  color: string;
+  fontFamily: string;
+  fontSize: string;
+  fontWeight: number;
+  _disabled: {
+    bgColor: string;
+    borderColor: string;
+    color: string;
+  };
+  _hover: {
+    bgColor: string;
+    borderColor: string;
+    color: string;
+  };
+  _primary: {
+    bgColor: string;
+    borderColor: string;
+    color: string;
+    _disabled: {
+      bgColor: string;
+      borderColor: string;
+      color: string;
+    };
+    _hover: {
+      bgColor: string;
+      borderColor: string;
+      color: string;
+    };
+  };
+};
+
+const button = ({ colors, fonts }: ThemeModuleVariables): ButtonTypes => {
   return {
     bgColor: colors.neutral.color50,
     borderColor: colors.neutral.color400,

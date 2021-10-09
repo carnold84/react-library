@@ -1,6 +1,13 @@
-import { ThemeModuleVariables } from '../../types';
+import { ThemeModuleVariables } from '../types';
 
-const global = ({ fonts }: ThemeModuleVariables) => {
+export type GlobalTypes = {
+  color: string;
+  htmlFontFamily: string;
+  htmlFontSize: string;
+  htmlFontWeight: number;
+};
+
+const global = ({ fonts }: ThemeModuleVariables): GlobalTypes => {
   return {
     color: '#222222',
     htmlFontFamily: fonts.primary.family,

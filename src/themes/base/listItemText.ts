@@ -1,6 +1,13 @@
-import { ThemeModuleVariables } from '../../types';
+import { ThemeModuleVariables } from '../types';
 
-const listItemText = ({ colors }: ThemeModuleVariables) => {
+export type ListItemTextTypes = {
+  color: string;
+  _secondary: {
+    color: string;
+  };
+};
+
+const listItemText = ({ colors }: ThemeModuleVariables): ListItemTextTypes => {
   return {
     color: colors.text.color100,
     _secondary: {

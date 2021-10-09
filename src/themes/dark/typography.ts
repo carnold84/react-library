@@ -1,4 +1,4 @@
-import { ThemeModuleVariables } from '../../types';
+import { ThemeModuleVariables } from '../types';
 
 const typography = ({ colors, fonts }: ThemeModuleVariables) => {
   return {
