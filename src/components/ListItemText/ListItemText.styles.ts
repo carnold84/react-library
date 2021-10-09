@@ -4,6 +4,7 @@ import Typography from '../Typography';
 export const Wrapper = styled(Typography)`
   color: ${({ theme }) => theme.listItemText.color};
   margin: 0;
+  text-decoration: none;
 
   &.is_secondary {
     color: ${({ theme }) => theme.listItemText._secondary.color};

@@ -1,8 +1,10 @@
 import React from 'react';
 
+import Checkbox from '../Checkbox';
 import List from './List';
 import ListItem from '../ListItem';
 import ListItemText from '../ListItemText/ListItemText';
+import { ChevronRight } from '../../icons';
 
 export default {
   argTypes: {},
@@ -10,17 +12,38 @@ export default {
   title: 'Components/List',
 };
 
-const Template = (args) => <List {...args} />;
+const Template = (args) => <List maxWidth={'400px'} {...args} />;
 
 export const Main = Template.bind({});
 Main.args = {
   children: (
     <>
-      <ListItem>
-        <ListItemText>Primary item text</ListItemText>
-        <ListItemText variant={'secondary'}>Secondary item text</ListItemText>
+      <ListItem
+        contentLeft={
+          <Checkbox
+            id={'checkbox'}
+            mr={2}
+            value={true}
+            onChange={() => console.log('change')}
+          />
+        }>
+        <ListItemText>Primary text</ListItemText>
+        <ListItemText variant={'secondary'}>Secondary text</ListItemText>
       </ListItem>
-      <ListItem>Menu</ListItem>
+      <ListItem
+        contentLeft={
+          <Checkbox
+            id={'checkbox2'}
+            mr={2}
+            value={false}
+            onChange={() => console.log('change')}
+          />
+        }>
+        <ListItemText>Single line item</ListItemText>
+      </ListItem>
+      <ListItem contentRight={<ChevronRight />}>
+        <ListItemText>Right content</ListItemText>
+      </ListItem>
     </>
   ),
 };

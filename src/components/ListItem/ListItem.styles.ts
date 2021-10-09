@@ -25,6 +25,7 @@ export const ContentMain = styled(Box)`
   display: flex;
   flex-direction: column;
   flex-grow: 1;
+  justify-content: center;
 `;
 
 export const ContentRight = styled(Box)`
