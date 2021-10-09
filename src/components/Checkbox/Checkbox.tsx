@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import {
   CheckedIcon,
   Icon,
@@ -10,7 +10,6 @@ import {
 } from './Checkbox.styles';
 
 export type CheckboxProps = {
-  children: React.ReactNode;
   id: string;
   isDisabled?: boolean;
   label?: string;
@@ -24,7 +23,6 @@ export type CheckboxProps = {
  * Controlled component for selecting one or more choices.
  */
 const Checkbox = ({
-  children,
   id,
   isDisabled = false,
   label,
@@ -46,11 +44,11 @@ const Checkbox = ({
       />
       <Label htmlFor={id}>
         <Icon>
-          <CheckedIcon aria-hidden={true} focusable="false" />
+          <CheckedIcon aria-hidden={true} focusable={false} />
           <UncheckedIcon
             aria-hidden={true}
             className={'unchecked'}
-            focusable="false"
+            focusable={false}
           />
         </Icon>
         <Text>{label}</Text>

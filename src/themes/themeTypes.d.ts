@@ -3,6 +3,7 @@ import { ButtonTypes } from './base/button';
 import { CheckboxTypes } from './base/checkbox';
 import { GlobalTypes } from './base/global';
 import { HeaderTypes } from './base/header';
+import { ListItemTypes } from './base/listItem';
 import { ListItemTextTypes } from './base/listItemText';
 import { TypographyTypes } from './base/typography';
 
@@ -24,6 +25,7 @@ export type BaseTheme = {
   checkbox: ({ colors, fonts }: ThemeModuleVariables) => CheckboxTypes;
   global: ({ colors, fonts }: ThemeModuleVariables) => GlobalTypes;
   header: ({ colors, fonts }: ThemeModuleVariables) => HeaderTypes;
+  listItem: ({ colors, fonts }: ThemeModuleVariables) => ListItemTypes;
   listItemText: ({ colors, fonts }: ThemeModuleVariables) => ListItemTextTypes;
   typography: ({ colors, fonts }: ThemeModuleVariables) => TypographyTypes;
 };
@@ -37,6 +39,7 @@ declare module 'styled-components' {
     global: GlobalTypes;
     header: HeaderTypes;
     id: string;
+    listItem: ListItemTypes;
     listItemText: ListItemTextTypes;
     name: string;
     typography: TypographyTypes;

@@ -5,15 +5,15 @@ export const Wrapper = styled(Box).attrs({
   forwardedAs: 'li',
 })`
   align-items: center;
-  background-color: ${({ theme }) => theme.header.backgroundColor};
-  border-bottom: 1px solid ${({ theme }) => theme.header.borderColor};
+  background-color: transparent;
+  border-bottom: 1px solid ${({ theme }) => theme.listItem.borderColor};
   display: flex;
 `;
 
 export const Content = styled(Box)`
   display: flex;
   height: 100%;
-  padding: 15px 20px;
+  padding: 12px 20px;
   width: 100%;
 `;
 

@@ -8,6 +8,6 @@ export const Wrapper = styled(Typography)`
   &.is_secondary {
     color: ${({ theme }) => theme.listItemText._secondary.color};
     font-size: 1.3rem;
-    margin: 3px 0 0;
+    margin: 1px 0 0;
   }
 `;

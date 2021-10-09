@@ -24,6 +24,7 @@ const createTheme = ({ colors, fonts, id, name, theme }: CreateThemeProps) => {
     global: theme.global({ colors, fonts }),
     header: theme.header({ colors, fonts }),
     id,
+    listItem: theme.listItem({ colors, fonts }),
     listItemText: theme.listItemText({ colors, fonts }),
     name,
     typography: theme.typography({ colors, fonts }),

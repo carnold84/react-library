@@ -9,7 +9,7 @@ import {
 
 type ListItemProps = {
   children: ReactNode;
-  component?: FunctionComponent | ComponentType | string;
+  component?: any;
   contentLeft?: ReactNode;
   contentRight?: ReactNode;
   [x: string]: any;
@@ -27,9 +27,9 @@ const ListItem = ({
 }: ListItemProps) => {
   return (
     <Wrapper {...rest}>
-      <Content forwardedAs={component}>
+      <Content>
         {contentLeft && <ContentLeft>{contentLeft}</ContentLeft>}
-        <ContentMain>{children}</ContentMain>
+        <ContentMain forwardedAs={component}>{children}</ContentMain>
         {contentRight && <ContentRight>{contentRight}</ContentRight>}
       </Content>
     </Wrapper>
