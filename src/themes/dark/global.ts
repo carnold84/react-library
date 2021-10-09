@@ -1,6 +1,7 @@
-import { ThemeModuleVariables } from '../types';
+import { GlobalTypes } from '../base/global';
+import { ThemeModuleVariables } from '../themeTypes';
 
-const global = ({ fonts }: ThemeModuleVariables) => {
+const global = ({ fonts }: ThemeModuleVariables): GlobalTypes => {
   return {
     color: '#222222',
     htmlFontFamily: fonts.primary.family,

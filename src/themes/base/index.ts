@@ -4,7 +4,7 @@ import global from './global';
 import header from './header';
 import listItemText from './listItemText';
 import typography from './typography';
-import { BaseTheme } from '../types';
+import { BaseTheme } from '../themeTypes';
 
 const baseTheme: BaseTheme = {
   button,

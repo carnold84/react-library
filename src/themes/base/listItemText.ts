@@ -1,4 +1,4 @@
-import { ThemeModuleVariables } from '../types';
+import { ThemeModuleVariables } from '../themeTypes';
 
 export type ListItemTextTypes = {
   color: string;

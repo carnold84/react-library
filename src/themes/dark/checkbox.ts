@@ -1,6 +1,7 @@
-import { ThemeModuleVariables } from '../types';
+import { CheckboxTypes } from '../base/checkbox';
+import { ThemeModuleVariables } from '../themeTypes';
 
-const checkbox = ({ colors }: ThemeModuleVariables) => {
+const checkbox = ({ colors }: ThemeModuleVariables): CheckboxTypes => {
   return {
     icon: {
       fill: colors.text.color200,

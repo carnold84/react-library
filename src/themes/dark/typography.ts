@@ -1,6 +1,10 @@
-import { ThemeModuleVariables } from '../types';
+import { TypographyTypes } from '../base/typography';
+import { ThemeModuleVariables } from '../themeTypes';
 
-const typography = ({ colors, fonts }: ThemeModuleVariables) => {
+const typography = ({
+  colors,
+  fonts,
+}: ThemeModuleVariables): TypographyTypes => {
   return {
     color: colors.text.color100,
     fontFamily: fonts.primary.family,

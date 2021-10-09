@@ -1,7 +1,7 @@
 import baseColors from './base/_colors';
 import baseFonts from './base/_fonts';
 import baseTheme from './base';
-import { BaseTheme, ThemeColors, ThemeFonts } from './types';
+import { BaseTheme, ThemeColors, ThemeFonts } from './themeTypes';
 
 export type CreateThemeProps = {
   colors?: ThemeColors;

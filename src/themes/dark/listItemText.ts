@@ -1,6 +1,7 @@
-import { ThemeModuleVariables } from '../types';
+import { ListItemTextTypes } from '../base/listItemText';
+import { ThemeModuleVariables } from '../themeTypes';
 
-const listItemText = ({ colors }: ThemeModuleVariables) => {
+const listItemText = ({ colors }: ThemeModuleVariables): ListItemTextTypes => {
   return {
     color: colors.text.color100,
     _secondary: {

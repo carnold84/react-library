@@ -1,6 +1,7 @@
-import { ThemeModuleVariables } from '../types';
+import { ButtonTypes } from '../base/button';
+import { ThemeModuleVariables } from '../themeTypes';
 
-const button = ({ colors, fonts }: ThemeModuleVariables) => {
+const button = ({ colors, fonts }: ThemeModuleVariables): ButtonTypes => {
   return {
     bgColor: colors.neutral.color50,
     borderColor: colors.neutral.color400,
