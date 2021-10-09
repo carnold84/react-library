@@ -5,6 +5,7 @@ import { GlobalTypes } from './base/global';
 import { HeaderTypes } from './base/header';
 import { ListItemTypes } from './base/listItem';
 import { ListItemTextTypes } from './base/listItemText';
+import { ProgressTypes } from './base/progress';
 import { TypographyTypes } from './base/typography';
 
 export type ThemeColors = {
@@ -27,6 +28,7 @@ export type BaseTheme = {
   header: ({ colors, fonts }: ThemeModuleVariables) => HeaderTypes;
   listItem: ({ colors, fonts }: ThemeModuleVariables) => ListItemTypes;
   listItemText: ({ colors, fonts }: ThemeModuleVariables) => ListItemTextTypes;
+  progress: ({ colors, fonts }: ThemeModuleVariables) => ProgressTypes;
   typography: ({ colors, fonts }: ThemeModuleVariables) => TypographyTypes;
 };
 
@@ -41,6 +43,7 @@ declare module 'styled-components' {
     id: string;
     listItem: ListItemTypes;
     listItemText: ListItemTextTypes;
+    progress: ProgressTypes;
     name: string;
     typography: TypographyTypes;
   }

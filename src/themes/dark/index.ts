@@ -6,6 +6,7 @@ import global from './global';
 import header from './header';
 import listItem from './listItem';
 import listItemText from './listItemText';
+import progress from './progress';
 import typography from './typography';
 
 import createTheme from '../createTheme';
@@ -22,6 +23,7 @@ export default createTheme({
     header,
     listItem,
     listItemText,
+    progress,
     typography,
   },
 });

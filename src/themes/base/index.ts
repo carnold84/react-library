@@ -4,6 +4,7 @@ import global from './global';
 import header from './header';
 import listItem from './listItem';
 import listItemText from './listItemText';
+import progress from './progress';
 import typography from './typography';
 import { BaseTheme } from '../themeTypes';
 
@@ -14,6 +15,7 @@ const baseTheme: BaseTheme = {
   header,
   listItem,
   listItemText,
+  progress,
   typography,
 };
 
