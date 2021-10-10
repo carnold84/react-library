@@ -40,8 +40,8 @@ export const Wrapper = styled(Box)`
   }
 
   &.is_p {
-    font-size: 1.4rem;
-    line-height: 1.6;
+    font-size: 1.3rem;
+    line-height: 1.5;
   }
 
   &.is_bold {

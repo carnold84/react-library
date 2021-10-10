@@ -7,7 +7,7 @@ const button = ({ colors, fonts }: ThemeModuleVariables): ButtonTypes => {
     borderColor: colors.neutral.color400,
     color: colors.text.color200,
     fontFamily: fonts.primary.family,
-    fontSize: '1.4rem',
+    fontSize: '1.3rem',
     fontWeight: fonts.primary.weight,
     _disabled: {
       bgColor: colors.neutral.color50,

@@ -28,7 +28,7 @@ export default {
 
 const Template = (args) => (
   <>
-    <Typography {...args}>
+    <Typography width={'700px'} {...args}>
       Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc cursus vitae
       mi at tristique. Suspendisse porttitor ipsum a pulvinar vulputate.
     </Typography>

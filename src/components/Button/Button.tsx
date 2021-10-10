@@ -3,6 +3,7 @@ import { Wrapper } from './Button.styles';
 
 export type ButtonProps = {
   children: React.ReactNode;
+  component?: any;
   isDisabled?: boolean;
   isPrimary?: boolean;
   onClick?(event: React.MouseEvent<HTMLButtonElement>): void;
@@ -15,6 +16,7 @@ export type ButtonProps = {
 const Button = ({
   children,
   className,
+  component = 'button',
   isDisabled = false,
   isPrimary = false,
   onClick,
@@ -32,7 +34,7 @@ const Button = ({
 
   return (
     <Wrapper
-      as={'button'}
+      forwardedAs={component}
       className={`${classes.join(' ')}`}
       disabled={isDisabled}
       onClick={onClick}

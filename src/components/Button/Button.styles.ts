@@ -12,7 +12,7 @@ export const Wrapper = styled(Box)`
   font-family: ${({ theme }) => theme.button.fontFamily};
   font-size: ${({ theme }) => theme.button.fontSize};
   font-weight: ${({ theme }) => theme.button.fontWeight};
-  padding: 11px 20px;
+  padding: 8px 18px;
 
   &:hover {
     background-color: ${({ theme }) => theme.button._hover.bgColor};
