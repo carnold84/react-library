@@ -11,4 +11,6 @@ export default {
 const Template = (args) => <Progress {...args} />;
 
 export const Main = Template.bind({});
-Main.args = {};
+Main.args = {
+  size: 34,
+};

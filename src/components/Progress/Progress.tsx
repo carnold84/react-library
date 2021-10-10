@@ -14,12 +14,12 @@ const Progress = (props: Props) => {
       <Loader>
         <Circle viewBox="25 25 50 50">
           <Path
-            cx="50"
-            cy="50"
-            r="15"
-            fill="none"
-            stroke-width="3"
-            stroke-miterlimit="10"
+            cx={50}
+            cy={50}
+            r={15}
+            fill={'none'}
+            stroke-width={'3'}
+            stroke-miterlimit={'10'}
           />
         </Circle>
       </Loader>

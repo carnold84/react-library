@@ -1,4 +1,5 @@
 export { default as App } from './components/App';
+export { default as Box } from './components/Box';
 export { default as Button } from './components/Button';
 export { default as Checkbox } from './components/Checkbox';
 export { default as Header } from './components/Header';

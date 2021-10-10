@@ -1,34 +1,33 @@
 import styled, { keyframes } from 'styled-components';
-import Box from '../Box';
 
 const rotate = keyframes`
-    100% {
-        transform: rotate(360deg);
-    }
+  100% {
+    transform: rotate(360deg);
+  }
 `;
 
 const dash = keyframes`
-    0% {
-        stroke-dasharray: 1, 200;
-        stroke-dashoffset: 0;
-    }
-    50% {
-        stroke-dasharray: 89, 200;
-        stroke-dashoffset: -35px;
-    }
-    100% {
-        stroke-dasharray: 89, 200;
-        stroke-dashoffset: -124px;
-    }
+  0% {
+    stroke-dasharray: 1, 200;
+    stroke-dashoffset: 0;
+  }
+  50% {
+    stroke-dasharray: 89, 200;
+    stroke-dashoffset: -35px;
+  }
+  100% {
+    stroke-dasharray: 89, 200;
+    stroke-dashoffset: -124px;
+  }
 `;
 
-export const Wrapper = styled(Box)`
-  width: 34px;
-  height: 34px;
-  top: 0;
+export const Wrapper = styled.div`
   bottom: 0;
+  height: 34px;
   left: 0;
   right: 0;
+  top: 0;
+  width: 34px;
 `;
 
 export const Loader = styled.div`
@@ -44,23 +43,23 @@ export const Loader = styled.div`
 `;
 
 export const Circle = styled.svg`
-  position: absolute;
-  width: 34px;
-  height: 34px;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
   animation: ${rotate} 2s linear infinite;
-  transform-origin: center center;
+  bottom: 0;
+  height: 34px;
+  left: 0;
   margin: auto;
-  stroke: ${({ theme }) => theme.progress.fill};
+  position: absolute;
+  right: 0;
+  stroke: ${({ theme }) => theme.colors.primary.color500};
+  top: 0;
+  transform-origin: center center;
+  width: 34px;
 `;
 
 export const Path = styled.circle`
-  stroke-width: 3px;
+  animation: ${dash} 1.5s ease-in-out infinite;
   stroke-dasharray: 1, 200;
   stroke-dashoffset: 0;
-  animation: ${dash} 1.5s ease-in-out infinite;
   stroke-linecap: round;
+  stroke-width: 3px;
 `;
