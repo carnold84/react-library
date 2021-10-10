@@ -21,19 +21,23 @@ const dash = keyframes`
   }
 `;
 
-export const Wrapper = styled.div`
+type Props = {
+  diameter: number;
+};
+
+export const Wrapper = styled.div<Props>`
   bottom: 0;
-  height: 34px;
+  height: ${({ diameter }) => diameter}px;
   left: 0;
   right: 0;
   top: 0;
-  width: 34px;
+  width: ${({ diameter }) => diameter}px;
 `;
 
-export const Loader = styled.div`
+export const Loader = styled.div<Props>`
   position: relative;
   margin: 0 auto;
-  width: 34px;
+  width: ${({ diameter }) => diameter}px;
 
   &:before {
     content: '';
@@ -42,10 +46,10 @@ export const Loader = styled.div`
   }
 `;
 
-export const Circle = styled.svg`
+export const Circle = styled.svg<Props>`
   animation: ${rotate} 2s linear infinite;
   bottom: 0;
-  height: 34px;
+  height: ${({ diameter }) => diameter}px;
   left: 0;
   margin: auto;
   position: absolute;
@@ -53,10 +57,10 @@ export const Circle = styled.svg`
   stroke: ${({ theme }) => theme.colors.primary.color500};
   top: 0;
   transform-origin: center center;
-  width: 34px;
+  width: ${({ diameter }) => diameter}px;
 `;
 
-export const Path = styled.circle`
+export const Path = styled.circle<Props>`
   animation: ${dash} 1.5s ease-in-out infinite;
   stroke-dasharray: 1, 200;
   stroke-dashoffset: 0;
