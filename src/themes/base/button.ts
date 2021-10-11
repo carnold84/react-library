@@ -49,8 +49,8 @@ const button = ({ colors, fonts }: ThemeModuleVariables): ButtonTypes => {
     },
     _hover: {
       bgColor: colors.neutral.color50,
-      borderColor: colors.neutral.color900,
-      color: colors.text.color100,
+      borderColor: colors.primary.color100,
+      color: colors.primary.color500,
     },
     _primary: {
       bgColor: colors.primary.color500,
