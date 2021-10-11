@@ -8,6 +8,15 @@ export const Wrapper = styled(Box).attrs({
   background-color: transparent;
   border-bottom: 1px solid ${({ theme }) => theme.listItem.borderColor};
   display: flex;
+
+  &:hover {
+    background-color: ${({ theme }) => theme.colors.neutral.color200};
+    color: ${({ theme }) => theme.colors.primary.color500};
+  }
+
+  &.is_active {
+    background-color: ${({ theme }) => theme.colors.neutral.color200};
+  }
 `;
 
 export const Content = styled(Box)`
@@ -19,6 +28,7 @@ export const Content = styled(Box)`
 
 export const ContentLeft = styled(Box)`
   display: flex;
+  fill: currentColor;
 `;
 
 export const ContentMain = styled(Box)`
@@ -30,4 +40,5 @@ export const ContentMain = styled(Box)`
 
 export const ContentRight = styled(Box)`
   display: flex;
+  fill: currentColor;
 `;

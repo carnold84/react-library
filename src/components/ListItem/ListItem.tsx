@@ -12,6 +12,7 @@ type ListItemProps = {
   component?: any;
   contentLeft?: ReactNode;
   contentRight?: ReactNode;
+  isActive?: boolean;
   [x: string]: any;
 };
 
@@ -23,10 +24,11 @@ const ListItem = ({
   component = 'div',
   contentLeft,
   contentRight,
+  isActive = false,
   ...rest
 }: ListItemProps) => {
   return (
-    <Wrapper {...rest}>
+    <Wrapper className={isActive ? 'is_active' : ''} {...rest}>
       <Content>
         {contentLeft && <ContentLeft>{contentLeft}</ContentLeft>}
         <ContentMain forwardedAs={component}>{children}</ContentMain>

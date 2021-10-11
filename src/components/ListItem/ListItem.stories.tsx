@@ -26,6 +26,11 @@ export default {
         type: null,
       },
     },
+    isActive: {
+      control: {
+        type: 'boolean',
+      },
+    },
   },
   component: ListItem,
   title: 'Components/List Item',
