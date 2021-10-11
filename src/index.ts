@@ -3,6 +3,7 @@ export { default as Box } from './components/Box';
 export { default as Button } from './components/Button';
 export { default as Checkbox } from './components/Checkbox';
 export { default as Header } from './components/Header';
+export { default as IconButton } from './components/IconButton';
 export { default as List } from './components/List';
 export { default as ListItem } from './components/ListItem';
 export { default as ListItemText } from './components/ListItemText';

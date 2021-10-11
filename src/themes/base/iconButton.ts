@@ -1,40 +1,40 @@
 import { ThemeModuleVariables } from '../themeTypes';
 
 export type IconButtonTypes = {
-  color: string;
+  fill: string;
   _disabled: {
-    color: string;
+    fill: string;
   };
   _hover: {
-    color: string;
+    fill: string;
   };
   _primary: {
-    color: string;
+    fill: string;
     _disabled: {
-      color: string;
+      fill: string;
     };
     _hover: {
-      color: string;
+      fill: string;
     };
   };
 };
 
 const button = ({ colors }: ThemeModuleVariables): IconButtonTypes => {
   return {
-    color: colors.text.color200,
+    fill: colors.text.color200,
     _disabled: {
-      color: colors.text.color400,
+      fill: colors.text.color400,
     },
     _hover: {
-      color: colors.primary.color500,
+      fill: colors.primary.color500,
     },
     _primary: {
-      color: colors.primary.color500,
+      fill: colors.primary.color500,
       _disabled: {
-        color: colors.primary.color200,
+        fill: colors.primary.color200,
       },
       _hover: {
-        color: colors.primary.color400,
+        fill: colors.primary.color400,
       },
     },
   };

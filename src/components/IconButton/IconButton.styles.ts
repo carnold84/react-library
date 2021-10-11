@@ -1,39 +1,36 @@
 import styled from 'styled-components';
-import Button from '../Button';
+import Box from '../Box';
 
 // extend box so we can use styled stystem spacing, sizes etc
-export const Wrapper = styled(Button)`
+export const Wrapper = styled(Box)`
+  align-items: center;
   background-color: transparent;
   border: none;
   border-radius: 0;
+  cursor: pointer;
+  display: inline-flex;
+  fill: ${({ theme }) => theme.iconButton.fill};
+  justify-content: center;
   padding: 2px;
 
   &:hover {
-    background-color: transparent;
+    fill: ${({ theme }) => theme.iconButton._hover.fill};
   }
 
   &:disabled {
-    background-color: transparent;
-    color: ${({ theme }) => theme.iconButton._disabled.color};
-    fill: ${({ theme }) => theme.iconButton._disabled.color};
+    fill: ${({ theme }) => theme.iconButton._disabled.fill};
     pointer-events: none;
   }
 
   &.is_primary {
-    background-color: transparent;
-    color: ${({ theme }) => theme.iconButton._primary.color};
-    fill: ${({ theme }) => theme.iconButton._primary.color};
+    fill: ${({ theme }) => theme.iconButton._primary.fill};
 
     &:hover {
-      background-color: transparent;
-      color: ${({ theme }) => theme.iconButton._primary._hover.color};
-      fill: ${({ theme }) => theme.iconButton._primary._hover.color};
+      fill: ${({ theme }) => theme.iconButton._primary._hover.fill};
     }
 
     &:disabled {
-      background-color: transparent;
-      color: ${({ theme }) => theme.iconButton._primary._disabled.color};
-      fill: ${({ theme }) => theme.iconButton._primary._disabled.color};
+      fill: ${({ theme }) => theme.iconButton._primary._disabled.fill};
       pointer-events: none;
     }
   }

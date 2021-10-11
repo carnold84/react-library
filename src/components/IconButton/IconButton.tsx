@@ -11,21 +11,32 @@ export type IconButtonProps = {
 };
 
 /**
- * Plain Button designed for icons
+ * Primary UI component for user interaction
  */
 const IconButton = ({
   children,
+  className,
   component = 'button',
   isDisabled = false,
   isPrimary = false,
   onClick,
   ...rest
 }: IconButtonProps) => {
+  const classes = [];
+
+  if (isPrimary) {
+    classes.push('is_primary');
+  }
+
+  if (className) {
+    classes.push(className);
+  }
+
   return (
     <Wrapper
       forwardedAs={component}
-      isDisabled={isDisabled}
-      isPrimary={isPrimary}
+      className={`${classes.join(' ')}`}
+      disabled={isDisabled}
       onClick={onClick}
       {...rest}>
       {children}
