@@ -23,7 +23,7 @@ const IconButton = ({
 }: IconButtonProps) => {
   return (
     <Wrapper
-      component={component}
+      forwardedAs={component}
       isDisabled={isDisabled}
       isPrimary={isPrimary}
       onClick={onClick}

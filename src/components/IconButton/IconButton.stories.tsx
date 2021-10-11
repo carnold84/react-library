@@ -11,6 +11,11 @@ export default {
         type: null,
       },
     },
+    component: {
+      control: {
+        type: null,
+      },
+    },
     isDisabled: {
       control: {
         type: 'boolean',

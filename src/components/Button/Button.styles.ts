@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import Box from '../Box';
 
-// extend box so we can use styled stystem spacing, sizes etc
+// extend box so we can use styled system spacing, sizes etc
 export const Wrapper = styled(Box)`
   align-items: center;
   background-color: ${({ theme }) => theme.button.bgColor};

@@ -3,6 +3,7 @@ import { ButtonTypes } from './base/button';
 import { CheckboxTypes } from './base/checkbox';
 import { GlobalTypes } from './base/global';
 import { HeaderTypes } from './base/header';
+import { IconButtonTypes } from './base/iconButton';
 import { ListItemTypes } from './base/listItem';
 import { ListItemTextTypes } from './base/listItemText';
 import { ProgressTypes } from './base/progress';
@@ -26,6 +27,7 @@ export type BaseTheme = {
   checkbox: ({ colors, fonts }: ThemeModuleVariables) => CheckboxTypes;
   global: ({ colors, fonts }: ThemeModuleVariables) => GlobalTypes;
   header: ({ colors, fonts }: ThemeModuleVariables) => HeaderTypes;
+  iconButton: ({ colors, fonts }: ThemeModuleVariables) => IconButtonTypes;
   listItem: ({ colors, fonts }: ThemeModuleVariables) => ListItemTypes;
   listItemText: ({ colors, fonts }: ThemeModuleVariables) => ListItemTextTypes;
   progress: ({ colors, fonts }: ThemeModuleVariables) => ProgressTypes;
@@ -40,6 +42,7 @@ declare module 'styled-components' {
     fonts: ThemeFonts;
     global: GlobalTypes;
     header: HeaderTypes;
+    iconButton: IconButtonTypes;
     id: string;
     listItem: ListItemTypes;
     listItemText: ListItemTextTypes;

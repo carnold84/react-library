@@ -23,6 +23,7 @@ const createTheme = ({ colors, fonts, id, name, theme }: CreateThemeProps) => {
     fonts,
     global: theme.global({ colors, fonts }),
     header: theme.header({ colors, fonts }),
+    iconButton: theme.iconButton({ colors, fonts }),
     id,
     listItem: theme.listItem({ colors, fonts }),
     listItemText: theme.listItemText({ colors, fonts }),
