@@ -16,6 +16,11 @@ export default {
         type: null,
       },
     },
+    isActive: {
+      control: {
+        type: 'boolean',
+      },
+    },
     isDisabled: {
       control: {
         type: 'boolean',

@@ -17,6 +17,21 @@ export type IconButtonTypes = {
       fill: string;
     };
   };
+  _active: {
+    bgColor: string;
+    borderColor: string;
+    fill: string;
+    _disabled: {
+      bgColor: string;
+      borderColor: string;
+      fill: string;
+    };
+    _hover: {
+      bgColor: string;
+      borderColor: string;
+      fill: string;
+    };
+  };
 };
 
 const button = ({ colors }: ThemeModuleVariables): IconButtonTypes => {
@@ -35,6 +50,21 @@ const button = ({ colors }: ThemeModuleVariables): IconButtonTypes => {
       },
       _hover: {
         fill: colors.primary.color400,
+      },
+    },
+    _active: {
+      bgColor: colors.primary.color400,
+      borderColor: colors.primary.color500,
+      fill: colors.text.alt200,
+      _disabled: {
+        bgColor: colors.primary.color100,
+        borderColor: colors.primary.color300,
+        fill: colors.primary.color200,
+      },
+      _hover: {
+        bgColor: colors.primary.color600,
+        borderColor: colors.primary.color600,
+        fill: colors.text.alt100,
       },
     },
   };
