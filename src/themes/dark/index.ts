@@ -2,6 +2,7 @@ import colors from './_colors';
 import fonts from './_fonts';
 import button from './button';
 import checkbox from './checkbox';
+import editor from './editor';
 import global from './global';
 import header from './header';
 import iconButton from './iconButton';
@@ -20,6 +21,7 @@ export default createTheme({
   theme: {
     button,
     checkbox,
+    editor,
     global,
     header,
     iconButton,

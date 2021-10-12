@@ -2,22 +2,20 @@ import styled from 'styled-components';
 import Box from '../Box';
 
 export const Wrapper = styled(Box)`
-  background-color: ${({ theme }) => theme.header.backgroundColor};
-  border: 1px solid ${({ theme }) => theme.header.borderColor};
+  border: 1px solid ${({ theme }) => theme.editor.borderColor};
   display: flex;
   flex-direction: column;
   height: 100%;
 `;
 
 export const MenuBar = styled(Box)`
-  background-color: ${({ theme }) => theme.header.backgroundColor};
-  border-bottom: 1px solid ${({ theme }) => theme.header.borderColor};
+  border-bottom: 1px solid ${({ theme }) => theme.editor.menuBar.borderColor};
+  fill: ${({ theme }) => theme.editor.menuBar.fill};
   padding: 10px;
 `;
 
 export const Content = styled(Box)`
-  background-color: ${({ theme }) => theme.header.backgroundColor};
-  border-bottom: 1px solid ${({ theme }) => theme.header.borderColor};
+  color: ${({ theme }) => theme.editor.content.color};
   flex-grow: 1;
 
   .ProseMirror {
@@ -27,7 +25,6 @@ export const Content = styled(Box)`
 
     &:hover,
     &:focus {
-      background-color: ${({ theme }) => theme.colors.neutral.color100};
       outline: none;
     }
   }

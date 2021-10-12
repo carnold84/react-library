@@ -20,6 +20,7 @@ const createTheme = ({ colors, fonts, id, name, theme }: CreateThemeProps) => {
     button: theme.button({ colors, fonts }),
     checkbox: theme.checkbox({ colors, fonts }),
     colors,
+    editor: theme.editor({ colors, fonts }),
     fonts,
     global: theme.global({ colors, fonts }),
     header: theme.header({ colors, fonts }),
