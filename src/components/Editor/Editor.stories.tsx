@@ -1,5 +1,6 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Box from '../Box';
+import Button from '../Button';
 
 import Editor from './Editor';
 
@@ -9,13 +10,24 @@ export default {
   title: 'Components/Editor',
 };
 
-const Template = (args) => (
-  <Box height={'200px'}>
-    <Editor {...args} />
-  </Box>
-);
+const Template = (args) => {
+  const [content, setContent] = useState({ html: 'Hello world!' });
+
+  return (
+    <>
+      <Button mb={3} onClick={() => setContent({ html: 'New Content!' })}>
+        Change content
+      </Button>
+      <Box height={'200px'}>
+        <Editor content={content} {...args} />
+      </Box>
+    </>
+  );
+};
 
 export const Main = Template.bind({});
 Main.args = {
-  content: 'Hello world!',
+  onUpdate: (content) => {
+    console.log(content);
+  },
 };
