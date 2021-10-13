@@ -28,6 +28,7 @@ const createTheme = ({ colors, fonts, id, name, theme }: CreateThemeProps) => {
     id,
     listItem: theme.listItem({ colors, fonts }),
     listItemText: theme.listItemText({ colors, fonts }),
+    modal: theme.modal({ colors, fonts }),
     progress: theme.progress({ colors, fonts }),
     name,
     typography: theme.typography({ colors, fonts }),

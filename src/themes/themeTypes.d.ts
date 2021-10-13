@@ -7,6 +7,7 @@ import { HeaderTypes } from './base/header';
 import { IconButtonTypes } from './base/iconButton';
 import { ListItemTypes } from './base/listItem';
 import { ListItemTextTypes } from './base/listItemText';
+import { ModalTypes } from './base/modal';
 import { ProgressTypes } from './base/progress';
 import { TypographyTypes } from './base/typography';
 
@@ -32,6 +33,7 @@ export type BaseTheme = {
   iconButton: ({ colors, fonts }: ThemeModuleVariables) => IconButtonTypes;
   listItem: ({ colors, fonts }: ThemeModuleVariables) => ListItemTypes;
   listItemText: ({ colors, fonts }: ThemeModuleVariables) => ListItemTextTypes;
+  modal: ({ colors, fonts }: ThemeModuleVariables) => ModalTypes;
   progress: ({ colors, fonts }: ThemeModuleVariables) => ProgressTypes;
   typography: ({ colors, fonts }: ThemeModuleVariables) => TypographyTypes;
 };
@@ -49,6 +51,7 @@ declare module 'styled-components' {
     id: string;
     listItem: ListItemTypes;
     listItemText: ListItemTextTypes;
+    modal: ModalTypes;
     progress: ProgressTypes;
     name: string;
     typography: TypographyTypes;

@@ -6,6 +6,7 @@ import header from './header';
 import iconButton from './iconButton';
 import listItem from './listItem';
 import listItemText from './listItemText';
+import modal from './modal';
 import progress from './progress';
 import typography from './typography';
 import { BaseTheme } from '../themeTypes';
@@ -19,6 +20,7 @@ const baseTheme: BaseTheme = {
   iconButton,
   listItem,
   listItemText,
+  modal,
   progress,
   typography,
 };

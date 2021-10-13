@@ -8,6 +8,7 @@ export { default as IconButton } from './components/IconButton';
 export { default as List } from './components/List';
 export { default as ListItem } from './components/ListItem';
 export { default as ListItemText } from './components/ListItemText';
+export { default as Modal } from './components/Modal';
 export { default as LoadingScreen } from './components/LoadingScreen';
 export { default as Progress } from './components/Progress';
 export { default as Typography } from './components/Typography';

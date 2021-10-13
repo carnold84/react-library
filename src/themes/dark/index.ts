@@ -8,6 +8,7 @@ import header from './header';
 import iconButton from './iconButton';
 import listItem from './listItem';
 import listItemText from './listItemText';
+import modal from './modal';
 import progress from './progress';
 import typography from './typography';
 
@@ -27,6 +28,7 @@ export default createTheme({
     iconButton,
     listItem,
     listItemText,
+    modal,
     progress,
     typography,
   },

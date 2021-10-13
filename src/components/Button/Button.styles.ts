@@ -15,7 +15,7 @@ export const Wrapper = styled(Box)`
   font-size: ${({ theme }) => theme.button.fontSize};
   font-weight: ${({ theme }) => theme.button.fontWeight};
   justify-content: center;
-  padding: 8px 18px;
+  padding: 6px 14px;
 
   &:hover {
     background-color: ${({ theme }) => theme.button._hover.bgColor};
