@@ -14,6 +14,7 @@ const ThemeDecorator = ({ children, theme }) => {
       selectedThemeId={theme?.theme.id}
       themes={[defaultTheme, darkTheme, orangeTheme]}>
       <GlobalStyles />
+      <div id={'portal'}></div>
       <Box
         p={20}
         style={{ backgroundColor: theme?.theme.colors.neutral.color100 }}>

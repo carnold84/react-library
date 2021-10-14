@@ -6,6 +6,7 @@ import darkTheme from '../../themes/dark';
 import defaultTheme from '../../themes/default';
 
 import App, { Props } from './App';
+import useModals from './hooks/useModals';
 
 export default {
   argTypes: {
@@ -40,13 +41,27 @@ const Background = styled.div`
   width: 100%;
 `;
 
+const ModalContent = () => {
+  const { addModal, removeModal } = useModals();
+  const onAddModal = () => {
+    addModal({
+      content: 'Modal content',
+      id: 'modal-1',
+      title: 'My first modal!',
+    });
+  };
+  return (
+    <Background>
+      <Button isPrimary={true} onClick={onAddModal}>
+        Show modal
+      </Button>
+    </Background>
+  );
+};
+
 export const DefaultApp = Template.bind({});
 DefaultApp.args = {
-  children: (
-    <Background>
-      <Button isPrimary={true}>Example Button</Button>
-    </Background>
-  ),
+  children: <ModalContent />,
   selectedThemeId: defaultTheme.id,
   themes: [defaultTheme, darkTheme],
 };

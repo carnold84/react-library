@@ -2,6 +2,8 @@ import React from 'react';
 import { DefaultTheme, ThemeProvider } from 'styled-components';
 import GlobalStyles from '../../styles/global.styles';
 import defaultTheme from '../../themes/default';
+import ModalManager from './containers/ModalManager';
+import AppProvider from './store';
 
 export interface Props {
   children: React.ReactNode;
@@ -36,7 +38,10 @@ const App = ({ children, selectedThemeId, themes }: Props) => {
   return (
     <ThemeProvider theme={selectedTheme}>
       <GlobalStyles />
-      {children}
+      <AppProvider>
+        <ModalManager />
+        {children}
+      </AppProvider>
     </ThemeProvider>
   );
 };

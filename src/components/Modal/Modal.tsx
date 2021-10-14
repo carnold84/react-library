@@ -14,8 +14,8 @@ import {
 
 type Props = {
   children: ReactNode;
-  footerContentLeft: ReactNode;
-  footerContentRight: ReactNode;
+  footerContentLeft?: ReactNode;
+  footerContentRight?: ReactNode;
   onDismiss?(id: string): void;
   title: string;
   [x: string]: any;
@@ -47,10 +47,13 @@ const Modal = ({
           )}
         </Header>
         <Content>{children}</Content>
-        <Footer>
-          <Control>{footerContentLeft}</Control>
-          <Control>{footerContentRight}</Control>
-        </Footer>
+        {footerContentLeft ||
+          (footerContentRight && (
+            <Footer>
+              <Control>{footerContentLeft}</Control>
+              <Control>{footerContentRight}</Control>
+            </Footer>
+          ))}
       </Container>
       <Overlay />
     </Wrapper>

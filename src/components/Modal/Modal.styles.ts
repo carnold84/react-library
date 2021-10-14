@@ -4,8 +4,12 @@ import Box from '../Box';
 export const Wrapper = styled(Box)`
   align-items: center;
   display: flex;
+  height: 100%;
   justify-content: center;
-  position: relative;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
 `;
 
 export const Container = styled.div`
