@@ -5,6 +5,7 @@ module.exports = {
     '@storybook/addon-a11y',
     'storybook-addon-themes',
   ],
+  core: { builder: 'storybook-builder-vite' },
   stories: ['../src/**/*.stories.mdx', '../src/**/*.stories.@(js|jsx|ts|tsx)'],
   typescript: {
     check: false,
