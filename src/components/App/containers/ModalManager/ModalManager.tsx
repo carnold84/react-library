@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { createPortal } from 'react-dom';
-import { useModals } from '../..';
+import useModals from '../../hooks/useModals';
 import Modal from '../../../Modal';
 import { Wrapper } from './ModalManager.styles';
 
