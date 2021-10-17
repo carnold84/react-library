@@ -1,0 +1,21 @@
+import { Meta } from '@storybook/addon-docs';
+
+<Meta title="Getting Started/Usage" />
+
+# Usage
+
+```jsx
+import React from 'react';
+import ReactDOM from 'react-dom';
+import { App as AppContainer, Button } from 'react-library';
+
+const App = () => {
+  return (
+    <AppContainer>
+      <Button isPrimary={true}>Hello World</Button>
+    </AppContainer>
+  );
+};
+
+ReactDOM.render(<App />, document.querySelector('#app'));
+```
