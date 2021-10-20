@@ -8,6 +8,10 @@ export type IconButtonTypes = {
   _hover: {
     fill: string;
   };
+  _focus: {
+    fill: string;
+    outline: string;
+  };
   _primary: {
     fill: string;
     _disabled: {
@@ -15,6 +19,10 @@ export type IconButtonTypes = {
     };
     _hover: {
       fill: string;
+    };
+    _focus: {
+      fill: string;
+      outline: string;
     };
   };
   _active: {
@@ -31,6 +39,10 @@ export type IconButtonTypes = {
       borderColor: string;
       fill: string;
     };
+    _focus: {
+      fill: string;
+      outline: string;
+    };
   };
 };
 
@@ -43,6 +55,10 @@ const button = ({ colors }: ThemeModuleVariables): IconButtonTypes => {
     _hover: {
       fill: colors.primary.color500,
     },
+    _focus: {
+      fill: colors.primary.color500,
+      outline: `2px solid ${colors.primary.color200}`,
+    },
     _primary: {
       fill: colors.primary.color500,
       _disabled: {
@@ -50,6 +66,10 @@ const button = ({ colors }: ThemeModuleVariables): IconButtonTypes => {
       },
       _hover: {
         fill: colors.primary.color400,
+      },
+      _focus: {
+        fill: colors.primary.color400,
+        outline: `2px solid ${colors.primary.color200}`,
       },
     },
     _active: {
@@ -65,6 +85,10 @@ const button = ({ colors }: ThemeModuleVariables): IconButtonTypes => {
         bgColor: colors.primary.color600,
         borderColor: colors.primary.color600,
         fill: colors.text.alt100,
+      },
+      _focus: {
+        fill: colors.text.alt100,
+        outline: `2px solid ${colors.primary.color200}`,
       },
     },
   };

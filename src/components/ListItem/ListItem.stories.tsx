@@ -1,7 +1,7 @@
 import React from 'react';
 
 import ListItem from './ListItem';
-import { LocationOutline } from '../../icons';
+import { PinAlt } from '../../icons';
 import ListItemText from '../ListItemText/ListItemText';
 
 export default {
@@ -45,9 +45,7 @@ Main.args = {
       <ListItemText>Primary item text</ListItemText>
     </>
   ),
-  contentLeft: (
-    <LocationOutline style={{ alignSelf: 'center', margin: '0 15px 0 0' }} />
-  ),
+  contentLeft: <PinAlt style={{ alignSelf: 'center', margin: '0 15px 0 0' }} />,
 };
 
 export const WithSecondaryText = Template.bind({});
@@ -58,7 +56,5 @@ WithSecondaryText.args = {
       <ListItemText variant={'secondary'}>Secondary item text</ListItemText>
     </>
   ),
-  contentLeft: (
-    <LocationOutline style={{ alignSelf: 'center', margin: '0 15px 0 0' }} />
-  ),
+  contentLeft: <PinAlt style={{ alignSelf: 'center', margin: '0 15px 0 0' }} />,
 };

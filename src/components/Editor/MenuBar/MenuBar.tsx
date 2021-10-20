@@ -5,6 +5,7 @@ import IconButton from '../../IconButton';
 import {
   Bold,
   Code,
+  CodeBracketsSquare,
   HeadingH1,
   HeadingH2,
   HeadingH3,
@@ -12,11 +13,10 @@ import {
   HeadingH5,
   HeadingH6,
   Italic,
-  ListOl,
-  ListUl,
+  List,
+  NumberedListLeft,
   Paragraph,
   Strikethrough,
-  WindowCodeBlock,
 } from '../../../icons';
 
 type Props = {
@@ -115,21 +115,21 @@ const MenuBar = ({ editor, ...rest }: Props) => {
       },
     },
     {
-      Icon: ListUl,
+      Icon: List,
       id: 'bulletList',
       onClick: () => {
         editor.chain().focus().toggleBulletList().run();
       },
     },
     {
-      Icon: ListOl,
+      Icon: NumberedListLeft,
       id: 'orderedList',
       onClick: () => {
         editor.chain().focus().toggleOrderedList().run();
       },
     },
     {
-      Icon: WindowCodeBlock,
+      Icon: CodeBracketsSquare,
       id: 'codeBlock',
       onClick: () => {
         editor.chain().focus().toggleCodeBlock().run();

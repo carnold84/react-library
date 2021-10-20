@@ -1,5 +1,5 @@
 import React, { ReactNode } from 'react';
-import { CloseSmall } from '../../icons';
+import { Cancel } from '../../icons';
 import IconButton from '../IconButton';
 import Typography from '../Typography';
 import {
@@ -42,7 +42,7 @@ const Modal = ({
           </Typography>
           {onDismiss && (
             <IconButton onClick={() => onDismiss(id)}>
-              <CloseSmall />
+              <Cancel />
             </IconButton>
           )}
         </Header>

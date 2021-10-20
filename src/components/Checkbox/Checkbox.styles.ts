@@ -1,9 +1,9 @@
 import styled from 'styled-components';
-import { Checkbox, CheckboxChecked } from '../../icons';
+import { Circle, CheckCircledOutline } from '../../icons';
 import Box from '../Box';
 import Typography from '../Typography';
 
-const size = '26px';
+const size = '20px';
 
 // extend box so we can use styled stystem spacing, sizes etc
 export const Wrapper = styled(Box)`
@@ -54,10 +54,10 @@ export const Input = styled.input`
 `;
 
 export const Text = styled.span`
-  margin: 0 0 0 3px;
+  margin: 0 0 0 6px;
 `;
 
-export const UncheckedIcon = styled(Checkbox)`
+export const UncheckedIcon = styled(Circle)`
   height: ${size};
   left: 0;
   opacity: 1;
@@ -72,7 +72,7 @@ export const UncheckedIcon = styled(Checkbox)`
   }
 `;
 
-export const CheckedIcon = styled(CheckboxChecked)`
+export const CheckedIcon = styled(CheckCircledOutline)`
   height: ${size};
   left: 0;
   opacity: 0;

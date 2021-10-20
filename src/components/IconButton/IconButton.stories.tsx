@@ -2,7 +2,7 @@ import React from 'react';
 import { Story, Meta } from '@storybook/react';
 
 import IconButton, { IconButtonProps } from './IconButton';
-import { TrashFull } from '../../icons';
+import { Trash } from '../../icons';
 
 export default {
   argTypes: {
@@ -44,7 +44,7 @@ export default {
 const Template: Story<IconButtonProps> = (args) => (
   <>
     <IconButton {...args}>
-      <TrashFull height={20} width={20} />
+      <Trash height={20} width={20} />
     </IconButton>
   </>
 );
@@ -52,6 +52,9 @@ const Template: Story<IconButtonProps> = (args) => (
 export const Default = Template.bind({});
 Default.args = {
   children: 'IconButton',
+  isActive: false,
+  isDisabled: false,
+  isPrimary: false,
   onClick: () => {
     alert('Clicked!');
   },

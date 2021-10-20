@@ -4,7 +4,7 @@ import Checkbox from '../Checkbox';
 import List from './List';
 import ListItem from '../ListItem';
 import ListItemText from '../ListItemText/ListItemText';
-import { ChevronRight } from '../../icons';
+import { NavArrowRight } from '../../icons';
 
 export default {
   argTypes: {},
@@ -41,7 +41,7 @@ Main.args = {
         }>
         <ListItemText>Single line item</ListItemText>
       </ListItem>
-      <ListItem contentRight={<ChevronRight />}>
+      <ListItem contentRight={<NavArrowRight />}>
         <ListItemText>Right content</ListItemText>
       </ListItem>
     </>

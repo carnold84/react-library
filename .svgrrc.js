@@ -1,11 +1,11 @@
 // .svgrrc.js
 module.exports = {
-  replaceAttrValues: { '#000': 'inherit' },
+  replaceAttrValues: { '#000': 'currentColor' },
   svgoConfig: {
     plugins: {
+      convertShapeToPath: true,
       removeViewBox: false,
     },
   },
-  svgProps: { fill: 'inherit' },
   typescript: true,
 };
